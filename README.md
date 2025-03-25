@@ -17,5 +17,17 @@ Member
 ![a](https://github.com/XACKIES/ENE331_Embedded_System_Lab/blob/main/Doc/Screenshot%202025-03-25%20095710.png)
 
 ### Answer
-[ENE331_HW1_File](https://github.com/XACKIES/ENE331_Embedded_System_Lab/tree/main/ENE331_HW1)
+[![b](https://github.com/XACKIES/ENE331_Embedded_System_Lab/blob/main/Doc/IMG_20250324_170548.jpg)](https://youtube.com/shorts/8QRXl6i8fDg?feature=share)
 
+[Click the picture to getting a video for result](https://youtube.com/shorts/8QRXl6i8fDg?feature=share)
+
+
+
+$$
+Prescaler =   \frac{Clock speed }{\left(\frac{1}{Timer * 1/2} \right)} - 1 = \frac{72\text{MHz}}{\left(\frac{1}{20\mu * 1/2}\right)} - 1 = 719
+$$
+
+
+Note : the timer have to muliply 1/2 because for the Requirement , the timer 20us is a period of 1 pulse 
+
+#### *** [ENE331_HW1_File](https://github.com/XACKIES/ENE331_Embedded_System_Lab/tree/main/ENE331_HW1) ***
