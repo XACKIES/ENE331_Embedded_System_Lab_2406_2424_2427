@@ -25,10 +25,10 @@ This GitHub repository is dedicated to the ENE331 Embedded System Lab at KMUTT, 
 
 
 $$
-Prescaler =   \frac{Clock speed }{\left(\frac{1}{Timer * 1/2} \right)} - 1 = \frac{72\text{MHz}}{\left(\frac{1}{20\mu * 1/2}\right)} - 1 = 719
+Prescaler =   \frac{Clock speed * 1/2}{\left(\frac{1}{Timer } \right)} - 1 = \frac{72\text{MHz} * 1/2}{\left(\frac{1}{20\mu }\right)} - 1 = 719
 $$
 
 
-Note : the timer have to muliply 1/2 because for the Requirement , the timer 20us is a period of 1 pulse 
+Note : the timer have to muliply 1/2 because for the APB1 is divided by 2 from Clock_Speed
 
 #### *** [ENE331_HW1_File](https://github.com/XACKIES/ENE331_Embedded_System_Lab/tree/main/ENE331_HW1) ***
