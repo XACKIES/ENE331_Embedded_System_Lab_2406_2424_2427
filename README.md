@@ -12,8 +12,6 @@ This GitHub repository is dedicated to the ENE331 Embedded System Lab at KMUTT, 
 - 65070502427 NIRACHA   PHOPHUANG
 
 
-
-
 ## HomeWork 1
 
 ### Requirement 
