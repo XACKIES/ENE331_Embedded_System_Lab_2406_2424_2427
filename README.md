@@ -31,4 +31,4 @@ $$
 
 Note : the timer have to muliply 1/2 because for the APB1 is divided by 2 from Clock_Speed
 
-#### *** [ENE331_HW1_File](https://github.com/XACKIES/ENE331_Embedded_System_Lab/tree/main/ENE331_HW1) ***
+#### *** [ENE331_HW1_File](https://github.com/XACKIES/ENE331_Embedded_System_Lab/tree/main/HW1) ***
