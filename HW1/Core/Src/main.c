@@ -19,30 +19,24 @@
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 
-/* Private includes ----------------------------------------------------------*/
-/* USER CODE BEGIN Includes */
 
-/* USER CODE END Includes */
 
-/* Private typedef -----------------------------------------------------------*/
-/* USER CODE BEGIN PTD */
 
-/* USER CODE END PTD */
 
-/* Private define ------------------------------------------------------------*/
-/* USER CODE BEGIN PD */
 
-/* USER CODE END PD */
+// Member
+// 65070502406 Kittiphop Phanthachart
+// 65070502424 NOPPAMIN PIRAWATCHARAPAISARN
+// 65070502427 NIRACHA PHOPHUANG
 
-/* Private macro -------------------------------------------------------------*/
-/* USER CODE BEGIN PM */
 
-/* USER CODE END PM */
 
-/* Private variables ---------------------------------------------------------*/
+
+
+
+
 TIM_HandleTypeDef htim2;
 
-/* USER CODE BEGIN PV */
 
 int 	Count_Timer =0;
 
