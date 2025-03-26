@@ -24,11 +24,17 @@ This GitHub repository is dedicated to the ENE331 Embedded System Lab at KMUTT, 
 
 
 
+The prescaler (PSC) can be calculated using the following equation:
+
 $$
-Prescaler =   \frac{Clock speed * 1/2}{\left(\frac{1}{Timer } \right)} - 1 = \frac{72\text{MHz} * 1/2}{\left(\frac{1}{20\mu }\right)} - 1 = 719
+PSC = \frac{f_{\text{ClockSpeed}}}{f_{\text{Timer}} \times (ARR+1)} - 1 = \frac{72,000,000}{\left(\frac{1}{20 \times 10^{-6}}\right) \times (1+1)} - 1= 719
 $$
 
 
-Note : the timer have to muliply 1/2 because for the APB1 is divided by 2 from Clock_Speed
+
+Where:  
+- $$f_{\text{ClockSpeed}}$$ is the APB1 timer clock frequency (Hz)  
+- $$f_{\text{Timer}}$$ is the desired update event frequency (Hz)  
+-  ARR   is the Auto-Reload Register value  
 
 #### *** [ENE331_HW1_File](https://github.com/XACKIES/ENE331_Embedded_System_Lab/tree/main/HW1) ***
