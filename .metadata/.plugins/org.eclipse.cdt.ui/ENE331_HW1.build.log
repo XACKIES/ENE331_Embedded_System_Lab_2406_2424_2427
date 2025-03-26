@@ -1,0 +1,10 @@
+00:01:30 **** Incremental Build of configuration Debug for project ENE331_HW1 ****
+make -j12 all 
+arm-none-eabi-size  ENE331_HW1.elf 
+   text	   data	    bss	    dec	    hex	filename
+   7248	     20	   1652	   8920	   22d8	ENE331_HW1.elf
+Finished building: default.size.stdout
+ 
+
+00:01:30 Build Finished. 0 errors, 0 warnings. (took 313ms)
+
