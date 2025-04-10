@@ -1,0 +1,31 @@
+!SESSION 2025-03-26 08:07:22.424 -----------------------------------------------
+eclipse.buildId=Version 1.18.0
+java.version=21.0.3
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data C:\_Kittiphop Working space\.Project_Github\ENE331_Embedded_System_Lab\HW1
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2025-03-26 08:07:27.639
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2025-03-26 08:07:27.640
+!MESSAGE Log4j2 initialized with config file C:\_Kittiphop Working space\.Project_Github\ENE331_Embedded_System_Lab\HW1\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2025-03-26 08:07:30.258
+!MESSAGE Started RMI Server, listening on port 41337
+!SESSION 2025-03-26 08:07:57.440 -----------------------------------------------
+eclipse.buildId=Version 1.18.0
+java.version=21.0.3
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  C:\_Kittiphop Working space\.Project_Github\ENE331_Embedded_System_Lab\HW1\.project
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 C:\_Kittiphop Working space\.Project_Github\ENE331_Embedded_System_Lab\HW1\.project
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2025-03-26 08:08:01.730
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2025-03-26 08:08:01.732
+!MESSAGE Log4j2 initialized with config file C:\_Kittiphop Working space\.Project_Github\ENE331_Embedded_System_Lab\HW1\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2025-03-26 08:08:05.307
+!MESSAGE Started RMI Server, listening on port 41337
