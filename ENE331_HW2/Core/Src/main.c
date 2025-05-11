@@ -1,20 +1,12 @@
-/* USER CODE BEGIN Header */
-/**
- ******************************************************************************
- * @file           : main.c
- * @brief          : Main program body
- ******************************************************************************
- * @attention
- *
- * Copyright (c) 2025 STMicroelectronics.
- * All rights reserved.
- *
- * This software is licensed under terms that can be found in the LICENSE file
- * in the root directory of this software component.
- * If no LICENSE file comes with this software, it is provided AS-IS.
- *
- ******************************************************************************
- */
+
+//******************************************************************************
+//-- Author       	Kittiphop Phanthachart
+//-- Student ID   	65070502406
+//-- Date(YY/MM/DD)	2025/05/11
+// ******************************************************************************
+
+
+
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
@@ -100,51 +92,55 @@ int main(void) {
 
 	/* Infinite loop */
 	/* USER CODE BEGIN WHILE */
-	while (1)
-	{
-	    HAL_ADC_Start(&hadc1);
-	    HAL_ADC_PollForConversion(&hadc1, 1);
+	while (1) {
+		HAL_ADC_Start(&hadc1);
+		HAL_ADC_PollForConversion(&hadc1, 1);
 
+		if (HAL_GPIO_ReadPin(GPIOB, GPIO_PIN_0) == GPIO_PIN_SET) {
 
-	    if (HAL_GPIO_ReadPin(GPIOB, GPIO_PIN_0) == GPIO_PIN_SET)
-	    {
+			if (HAL_GPIO_ReadPin(GPIOB, GPIO_PIN_1) == GPIO_PIN_SET) {
+				ADC_READ = HAL_ADC_GetValue(&hadc1);
+				HAL_Delay(1000);
+				sprintf(buffer, "ADC: %lu\r\n", ADC_READ);
+				//	        ADC_READ = HAL_ADC_GetValue(&hadc1);
+				//	        HAL_Delay(1);
+				//	        sprintf(buffer, "ADC: %lu\r\n", ADC_READ);
+			} else {
 
-	        ADC_READ = HAL_ADC_GetValue(&hadc1);
-	        HAL_Delay(1);
-	        sprintf(buffer, "ADC: %lu\r\n", ADC_READ);
-	    }
-	    else
-	    {
+				temp = 0;
+				for (int i = 0; i < 8; i++) {
+					ADC_READ = HAL_ADC_GetValue(&hadc1);
+					HAL_Delay(1000);
+					temp += ADC_READ;
+				}
+				Filter = temp / 8;
+				sprintf(buffer, "ADC w/ Filter(8 window): %lu\r\n", Filter);
+						}
 
-	        if (HAL_GPIO_ReadPin(GPIOB, GPIO_PIN_1) == GPIO_PIN_SET)
-	        {
-	            temp = 0;
-	            for (int i = 0; i < 8; i++)
-	            {
-	                ADC_READ = HAL_ADC_GetValue(&hadc1);
-	                HAL_Delay(1);
-	                temp += ADC_READ;
-	            }
-	            Filter = temp / 8;
-	            sprintf(buffer, "ADC w/ Filter(8 window): %lu\r\n", Filter);
-	        }
-	        else
-	        {
+		} else {
+			if (HAL_GPIO_ReadPin(GPIOB, GPIO_PIN_1) == GPIO_PIN_SET) {
+				temp = 0;
+				for (int i = 0; i < 8; i++) {
+					ADC_READ = HAL_ADC_GetValue(&hadc1);
+					HAL_Delay(1);
+					temp += ADC_READ;
+				}
+				Filter = temp / 8;
+				sprintf(buffer, "ADC w/ Filter(8 window): %lu\r\n", Filter);
+			} else {
 
-	            temp = 0;
-	            for (int i = 0; i < 16; i++)
-	            {
-	                ADC_READ = HAL_ADC_GetValue(&hadc1);
-	                HAL_Delay(1);
-	                temp += ADC_READ;
-	            }
-	            Filter = temp / 16;
-	            sprintf(buffer, "ADC w/ Filter(16 window): %lu\r\n", Filter);
-	        }
-	    }
+				temp = 0;
+				for (int i = 0; i < 16; i++) {
+					ADC_READ = HAL_ADC_GetValue(&hadc1);
+					HAL_Delay(1);
+					temp += ADC_READ;
+				}
+				Filter = temp / 16;
+				sprintf(buffer, "ADC w/ Filter(16 window): %lu\r\n", Filter);
+			}
+		}
 
-	    // ส่งข้อมูลผ่าน CDC
-	    CDC_Transmit_FS((uint8_t*) buffer, strlen(buffer));
+		CDC_Transmit_FS((uint8_t*) buffer, strlen(buffer));
 	}
 }
 
